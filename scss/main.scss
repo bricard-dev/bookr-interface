@@ -1,4 +1,39 @@
+// FONT
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+// VAR
+
+$source-sans-pro: "Source Sans Pro", sans-serif;
+$manrope-display: "Manrope", sans-serif;
+$playfair-display: "Playfair Display", serif;
+$bg-yellow: rgb(255, 254, 120);
+$bg-blueGrey: rgb(218, 239, 246);
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: $source-sans-pro;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $playfair-display;
+}
+
+.homepage {
+  display: grid;
+  grid-template-rows: 100px auto;
+
+  background-color: $bg-yellow;
 }
