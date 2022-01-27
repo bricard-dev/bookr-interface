@@ -295,3 +295,19 @@ h6 {
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    margin: auto !important;
+  }
+
+  .hero {
+    background-size: 75%;
+
+    .content {
+      h1 {
+        font-size: 60px;
+      }
+    }
+  }
+}
