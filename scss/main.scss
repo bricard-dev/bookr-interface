@@ -31,9 +31,127 @@ h6 {
   font-family: $playfair-display;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 20px;
+}
+
 .homepage {
   display: grid;
   grid-template-rows: 100px auto;
 
   background-color: $bg-yellow;
+}
+
+.header {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+
+  background-color: $bg-yellow;
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 54px;
+  }
+
+  .mobile-menu-container {
+    .burger-button,
+    .close-button {
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      background-color: transparent;
+      border: none;
+
+      cursor: pointer;
+    }
+
+    .burger-button {
+      width: 32px;
+      height: 15px;
+
+      background-image: url(../assets/mobile-menu-button/burger.png);
+    }
+
+    .close-button {
+      width: 24px;
+      height: 24px;
+
+      background-image: url(../assets/mobile-menu-button/close.png);
+    }
+
+    .mobile-menu {
+      z-index: 100;
+
+      visibility: hidden;
+      opacity: 0;
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      padding-top: 100px;
+
+      transition: visibility 0.2s, opacity 0.2s;
+
+      &.visible {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 100px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+      }
+
+      .menu {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+
+        padding: 10px 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: $bg-yellow;
+
+        .link {
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+
+          border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+
+          text-decoration: none;
+          font-family: $playfair-display;
+          font-size: 38px;
+
+          color: rgba(0, 0, 0, 0.3);
+
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-container {
+    display: none;
+  }
 }
