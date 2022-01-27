@@ -263,3 +263,35 @@ h6 {
     }
   }
 }
+
+@media screen and (min-width: 769px) {
+  .header {
+    .mobile-menu-container {
+      display: none;
+    }
+
+    .menu-container {
+      display: block;
+
+      .menu {
+        display: flex;
+
+        .link {
+          margin-right: 25px;
+          text-decoration: none;
+          color: rgba(0, 0, 0, 1);
+
+          transition: color 0.3s;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &:hover {
+            color: rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+    }
+  }
+}
