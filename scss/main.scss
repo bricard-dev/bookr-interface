@@ -31,6 +31,10 @@ h6 {
   font-family: $playfair-display;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 20px;
@@ -208,5 +212,54 @@ h6 {
 
   .cta {
     display: none;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .homepage {
+    min-height: 100vh;
+  }
+
+  .hero {
+    background-image: url(../img/background/connected-hand.png);
+    background-size: 90%;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+
+    .wrapper {
+      display: grid;
+      grid-template-rows: auto 100px;
+      margin: 0 20px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+
+    .parallax {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 385px;
+
+      border-radius: 24px;
+
+      .card {
+        padding-left: 44px;
+      }
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+    }
   }
 }
