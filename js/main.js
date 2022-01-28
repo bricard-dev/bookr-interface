@@ -31,6 +31,11 @@ openMenu = () => {
   closeBtn.style.display = "";
   overlay.style.display = "";
   mobileMenu.classList.add("visible");
+
+  scrollTop();
+  body.classList.add("no-scroll");
+
+  menuIsOpen = true;
 };
 
 closeMenu = () => {
@@ -38,6 +43,12 @@ closeMenu = () => {
   closeBtn.style.display = "none";
   overlay.style.display = "none";
   mobileMenu.classList.remove("visible");
+
+  if (windowWidth <= mobileWidth) {
+    body.classList.remove("no-scroll");
+  }
+
+  menuIsOpen = false;
 };
 
 displayFormat = () => {
