@@ -1,16 +1,23 @@
-// FONT
-
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Manrope");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
-
 // VAR
+$manrope-regular: "Manrope-Regular";
+$eksell-display: "Eksell Display";
 
-$source-sans-pro: "Source Sans Pro", sans-serif;
-$manrope-display: "Manrope", sans-serif;
-$playfair-display: "Playfair Display", serif;
 $bg-yellow: rgb(255, 254, 120);
 $bg-blueGrey: rgb(218, 239, 246);
+
+// FONT
+
+@font-face {
+  font-family: $eksell-display;
+  src: url(../assets/fonts/EksellDisplay-Large.4fe4adf.woff2);
+}
+
+@font-face {
+  font-family: $manrope-regular;
+  src: url(../assets/fonts/Manrope-Regular.1b6a580.woff2);
+}
+
+// GENERAL
 
 * {
   margin: 0;
@@ -18,8 +25,8 @@ $bg-blueGrey: rgb(218, 239, 246);
 }
 
 body {
-  font-size: 16px;
-  font-family: $source-sans-pro;
+  font-size: 14px;
+  font-family: $manrope-regular, sans-serif;
 }
 
 h1,
@@ -28,7 +35,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $playfair-display;
+  font-family: $eksell-display;
+  font-weight: 400;
 }
 
 .no-scroll {
@@ -128,7 +136,7 @@ h6 {
         left: 0;
         right: 0;
 
-        padding: 10px 20px;
+        padding: 0 20px 10px 20px;
 
         display: flex;
         flex-direction: column;
@@ -142,8 +150,8 @@ h6 {
           border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
 
           text-decoration: none;
-          font-family: $playfair-display;
-          font-size: 38px;
+          font-size: 40px;
+          font-family: $eksell-display;
 
           color: rgba(0, 0, 0, 0.3);
 
@@ -177,7 +185,7 @@ h6 {
     }
 
     h1 {
-      font-size: 44px;
+      font-size: 48px;
     }
   }
 
@@ -194,7 +202,7 @@ h6 {
         margin-bottom: 40px;
 
         h2 {
-          font-size: 28px;
+          font-size: 32px;
         }
       }
 
@@ -248,7 +256,7 @@ h6 {
       position: absolute;
       top: 0;
       right: 0;
-      width: 385px;
+      width: 360px;
 
       border-radius: 24px;
 
@@ -296,6 +304,14 @@ h6 {
   }
 }
 
+@media screen and (min-width: 1025px) {
+  .hero {
+    .parallax {
+      width: 385px;
+    }
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .wrapper {
     margin: auto !important;
@@ -306,7 +322,7 @@ h6 {
 
     .content {
       h1 {
-        font-size: 60px;
+        font-size: 64px;
       }
     }
   }
