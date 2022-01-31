@@ -12,7 +12,7 @@ const overlay = document.querySelector(".overlay");
 const mobileWidth = 425;
 const tabletWidth = 768;
 
-const totalScroll = 850;
+const totalScroll = 950;
 
 let menuIsOpen = false;
 

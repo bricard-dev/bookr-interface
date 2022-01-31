@@ -223,6 +223,13 @@ h6 {
   }
 }
 
+.second-page {
+  height: 100px;
+  width: 100%;
+
+  background-color: $bg-blueGrey;
+}
+
 @media screen and (min-width: 426px) {
   .homepage {
     min-height: 100vh;
